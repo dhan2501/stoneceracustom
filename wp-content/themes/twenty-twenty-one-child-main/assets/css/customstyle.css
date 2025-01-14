@@ -1,0 +1,23 @@
+.custom-add-to-wishlist {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.wishlist-heart {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.empty-heart {
+    color: #ccc; /* Grey for empty heart */
+}
+
+.filled-heart {
+    color: #ff4081; /* Pink for filled heart */
+}
+
+.custom-add-to-wishlist:hover .wishlist-heart {
+    color: #e91e63; /* Darker pink on hover */
+}
