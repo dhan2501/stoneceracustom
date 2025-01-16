@@ -13,6 +13,9 @@ function custom_wishlist_button_over_image() {
     echo $is_in_wishlist 
         ? '<span class="wishlist-heart filled-heart">&#9829;</span>' 
         : '<span class="wishlist-heart empty-heart">&#9825;</span>';
+    // echo $is_in_wishlist 
+    //     ? '<span class="wishlist-heart filled-heart"><i class="fa fa-heart" aria-hidden="true"></i></span>' 
+    //     : '<span class="wishlist-heart empty-heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>';
     echo '</a>';
     echo '</div>';
 }
@@ -31,8 +34,8 @@ function custom_is_in_wishlist( $product_id ) {
 }
 
 // Display Wishlist Counter in Header
-add_action( 'wp_head', 'custom_add_wishlist_count_to_header' );
-
+// add_action( 'wp_head', 'custom_add_wishlist_count_to_header' );
+add_shortcode('tophead-wishlist', 'custom_add_wishlist_count_to_header');
 function custom_add_wishlist_count_to_header() {
     echo '<div class="wishlist-header">
         <a href="' . site_url( '/wishlist' ) . '">

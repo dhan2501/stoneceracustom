@@ -24,6 +24,9 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
+
+				<div class="col-lg-4 col-md-6 col-sm-6">	
+
 <li <?php wc_product_class( '', $product ); ?>>
 	<?php
 	/**
@@ -55,7 +58,7 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_price - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop_item_title' );
-
+echo do_shortcode('[custom-variations-on-shop]');
 	/**
 	 * Hook: woocommerce_after_shop_loop_item.
 	 *
@@ -65,3 +68,4 @@ if ( ! is_a( $product, WC_Product::class ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
 </li>
+</div>	

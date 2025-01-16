@@ -1,0 +1,24 @@
+#custom-mini-cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#custom-mini-cart .woocommerce-mini-cart__total {
+    font-weight: bold;
+}
+
+#custom-mini-cart .woocommerce-mini-cart__buttons {
+    margin-top: 10px;
+}
+
+#custom-mini-cart a {
+    text-decoration: none;
+    color: #0071a1;
+}

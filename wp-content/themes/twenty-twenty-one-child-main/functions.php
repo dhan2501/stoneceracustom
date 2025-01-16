@@ -215,3 +215,10 @@ add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 //     echo '</a>';
 //     echo '</div>';
 // }
+
+// Allow SVG upload
+function allow_svg_upload($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'allow_svg_upload');

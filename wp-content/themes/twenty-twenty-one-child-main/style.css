@@ -5,3 +5,14 @@ Version: 1.0.0
 */
 
 /* Add a custom background colour to the new body class */
+body {
+	background-color: #fff;
+}
+img.header_logo {
+    width: 50%;
+}
+
+.productlistcss{
+    display: flex;
+    flex-wrap: wrap;
+}
