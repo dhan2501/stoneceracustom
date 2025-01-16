@@ -1,0 +1,29 @@
+#wcas-search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#wcas-search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.product-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.product-item a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.product-item .price {
+    font-size: 14px;
+    color: #888;
+}

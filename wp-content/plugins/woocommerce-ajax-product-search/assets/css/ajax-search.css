@@ -1,0 +1,25 @@
+#woocommerce-ajax-search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#ajax-search-results {
+    margin-top: 20px;
+}
+
+.search-result {
+    padding: 10px;
+    background: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.search-result a {
+    font-size: 16px;
+    color: #0073aa;
+}

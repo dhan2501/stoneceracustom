@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">    
+    <!-- <title>Bootstrap demo</title> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> 
+    <?php wp_head(); ?>   
 </head>
-  <?php wp_head(); ?>
+  
   <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="<?= site_url(); ?>">
         <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
         $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         echo '<img class="header_logo" src="'.$image[0].'">';
@@ -82,10 +83,17 @@
 
         
       </ul>
-      <form class="d-flex" role="search">
+      <!-- <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form> -->
+      <?//= do_shortcode('[woocommerce_ajax_search_form]'); ?>
+      <?//= do_shortcode('[asearch  image="false" source="product, post, page"]'); ?>
+      <?= do_shortcode('[asearch  image="true" source="product,product_cat"]'); ?>
+      <!-- <div class="wcas-search-container">
+    <input type="text" id="wcas-search-input" placeholder="Search for products..." />
+    <div id="wcas-search-results"></div>
+</div> -->
       <ul>
       <li class="nav-item">
           <?php echo do_shortcode('[tophead-wishlist]'); ?>
